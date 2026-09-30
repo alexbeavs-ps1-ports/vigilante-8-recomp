@@ -6,7 +6,9 @@ name = "Vigilante 8"
 id = "SLES-01212"
 players = 1
 exe = "disc/SLES_012.12"
-disc = ""
+disc = "disc/Vigilante 8 (Europe).cue"
+discs = ["disc/Vigilante 8 (Europe).cue"]
+disc_serials = ["SLES-01212"]
 load_address = "0x80010000"
 entry_pc = "0x800116D4"
 text_size = "0x00056000"
@@ -33,11 +35,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "vigilante-8- Recompiled"
 memcard_dir = "saves"
 
